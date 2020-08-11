@@ -2,7 +2,7 @@
 <html>
     <head>
         <style>
-            #one{background-color:black;color:aqua;}
+            .one{background-color:black;color:aqua; }
           .us{color:black;border-radius:15px;padding:10px;}
           .pas{color:black;border-radius:15px;padding:10px;}
 #admin{width:100%;height:20px;margin-top:430px;border:1px solid black ;text-align:center;font-weight:bolder;}
@@ -18,14 +18,58 @@
    <body>
        <fieldset >
        <div id="one" letter-spacing=1em;><h1><center>ONLINE BANKING MANAGEMENT</center></h1>
-        <nav style="background-color:white;">
-            <a href="#nothing" >Home |</a>
-            <a href="#nothing" >About us |</a>
-            <a href="#nothing" >Contact us</a>
-        </nav> </div>
+        <div id="nav_container">
+            <div class="nav_cont_bg" style="float:none">
+                <ul id="navigation" class="home_navigation">
+                    <li class="active_menu"><a href="" >Home</a></li>
+                    <li><a href="" >Corporate Banking - Home</a></li>
+                    <li><a href="">How Do I</a></li>
+                    <li><a href="" >Security Tips</a></li>
+                    <li class=""><a href="sitemap.html" >Sitemap</a></li>
+                    <li class="">&nbsp;</li>
+                </ul>
+                <div class="search_box">
+                    <div class="ui-widget" style="margin-top:5px; background:none;">
+                        <input aria-label="Search" id="brval" />
+                        <span id="target" aria-label="Click Search" tabindex="0">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
       
-
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="https://miro.medium.com/max/2476/1*KLrplp2BcrWrc4ooQF-M8g.png" style="width:100%;height:50%;" >
+        <img class="mySlides" src="https://www.creditnation.in/content/images/home-loan-in-india.jpg"style="width:100%;height:50%;">
+        <img class="mySlides" src="https://www.bajajfinservmarkets.in/discover/wp-content/uploads/2019/04/Finance-Guru-Personal-Loan-2.png" style="width:100%;height:50%;">
+        <img class="mySlides" src="https://images.edexlive.com/uploads/user/imagelibrary/2020/5/30/original/PMCARES_FB1.jpg" style="width:100%;height:50%;">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+      
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
 <h2 style="font-width:bold;color:black;"><center>Your Bank at your Fingertips</center></h2>
+
 
    <form>
 <label style="margin-left:570px;" for="user"><b>Username:</b></label>
