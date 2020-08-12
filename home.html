@@ -10,9 +10,23 @@
           .pas{color:black;border-radius:15px;padding:10px;margin-top:10px;}
           .btn{margin-left:100px;padding:10px 100px 10px 100px;border-radius:15px;background-color:yellowgreen;font-family:Georgia, 'Times New Roman', Times, serif;}
           .chat-popup{display:none;position:fixed;bottom:0;right:150px;border:3px solid grey;z-index:9;}
+        .message{text-align: left;}
+        .messagebox { border: 2px outset black; text-align: center; background-color:cyan;}
         </style>
+        <script type="text/javascript">
+function changeColor()
+{
+  var x=document.getElementById("message");
+  if(x.style.color=="yellow")
+  x.style.color="red";
+  else if( x.style.color=="red")
+  x.style.color="green";
+  else
+  x.style.color="red"
+}
+        </script>
     </head>
-    <body>
+    <body onload="setInterval(changeColor,1000)">
       <div id="admin">
             <nav style="background-color:white;">
             <a style="font-size:20px;" href="C:\Users\HIMANI\Desktop\firstproject git\home.html">Home|</a>
@@ -23,10 +37,12 @@
     </nav>
                 </div>
                 <div id="moving"><marquee>  IF YOU ARE AN ADMIN AT OUR BANK SERVICES KINDLY LOGIN FROM HERE  <a href="C:\Users\HIMANI\Desktop\firstproject git\admin.html">Click here</a></marquee></div> 
-                 
-                
+                 <div class="messagebox">
+                <h3 id="message">Our Bank does not ask for any Confidential information such as bank account details,OTP or PIN <BR>
+                  Any such calls can be made by fraudster. Pls don't share personal information. </h3>  
+                </div>
         <div style="float:right" id="info">
-            <form>
+            <form >
                 <label  style="margin-left:70px;font-weight:bolder;font-size:30px;" for="user">Username:</label>
                 <input class="us" type="text" id="user" Placeholder="Your account username" ></input><br/><br>
                 <label style="margin-left:70px;font-weight:bolder;font-size:30px;"  for="pass">Password:</label>
@@ -44,6 +60,7 @@
                  </div></center>
                
                 <button onclick="openform()" class="chat-popup">Click here to review our webpage</button>
+                
 
 =======
         
