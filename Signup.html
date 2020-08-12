@@ -1,8 +1,8 @@
 <html>
     <head>
         <style>
-        #cs{padding:20px;text-align:center;background-color:blue;}
-        .lab{text-align:center;color:aqua;font-weight: bolder;font-size:x-large;margin-left:130px;}
+        #cs{padding:20px;background-color:blue;}
+       
         </style>
         <script type="text/javascript">
             function display(){
@@ -12,29 +12,63 @@
     </head>
     <body id="cs">
         <p>Fields marked with asterik(*) are compulsory to be filled</p>
-        <label class="lab" for="name">*First Name:</label>
-    <input type="text" id="name" placeholder="Enter your first name"></input><br><br>
-    <label class="lab" for="lname">*Last Name:</label>
-    <input type="text" id="lname" placeholder="Enter your last name"></input><br><br>
-    <label class="lab" for="fh">*Name of Father/Husband/Guardian:</label>
-    <input type="text" id="fh" placeholder="Enter name"></input><br><br>
-    <label class="lab" for="num">*Phone Number:</label>
-    <input type="number" id="num" placeholder="Enter your Phone number(XXX-XXX-XXXX)"></input><br><br>
-    <label class="lab" for="dob">*Date of Birth(DOB):</label>
-    <input type="date" id="dob" placeholder="Select your DOB"></input><br><br>
-    <label class="lab" for="m">*Name of Mother/Guardian:</label>
-    <input type="text" id="m" placeholder="Enter Mothre's name"></input><br><br>
-    <label class="lab" for="age">*Age:</label>
-    <input type="number" id="age" placeholder="Enter your AGE"></input><br><br>
-    <label class="lab" for="UID">*UID:</label>
-    <input type="password" id="uid" placeholder="Enter ADHAAR Number"></input><br><br>
-    <label class="lab" for="add">*Address1:</label>
-    <textarea type="address" id="add" cols="30" rows="8" placeholder="Enter your Permanent Address1"></textarea><br><br>
-    <label class="lab" for="add1">Address2:</label>
-    <textarea type="address" id="add1" cols="30" rows="8" placeholder="Enter your Permanent Address2"></textarea><br><br>
-    <label class="lab" for="mail">Email:</label>
-    <input type="email" id="mail" placeholder="Enter Email Id"></input><br><br>
-    <button onclick="display()">Submit</button>
-    </body>
+        <form id="form">
+            <table>
+    <tr><td><label class="lab" for="name">*First Name:</label></td>
+    <td><input type="text" id="name" placeholder="Enter your first name"></input><br><br></td>
+</tr>
+   <tr><td><label class="lab" for="lname">*Last Name:</label></td> 
+    <td><input type="text" id="lname" placeholder="Enter your last name"></input><br><br></td>
+    </tr>
+</tr><td><label class="lab" for="fh">*Name of Father/Husband/Guardian:</label></td>
+   <td> <input type="text" id="fh" placeholder="Enter name"></input><br><br></td>
+</tr>
+   <tr><td> <label class="lab" for="num">*Phone Number:</label></td>
+   <td><input type="text" id="num" placeholder="Enter your Phone number(XXX-XXX-XXXX)"></input><br><br></td>
+   </tr>
+   <tr><td>  <label class="lab" for="dob">*Date of Birth(DOB):</label></td>
+    <td> <input type="date" id="dob" placeholder="Select your DOB"></input><br><br></td>
+   </tr>
+   <tr><td>   <label class="lab" for="m">*Name of Mother/Guardian:</label></td>
+   <td> <input type="text" id="m" placeholder="Enter Mothre's name"></input><br><br></td>
+   </tr>
+   <tr><td>   <label class="lab" for="age">*Age:</label></td>
+    <td>  <input type="number" id="age" placeholder="Enter your AGE"></input><br><br></td>
+</tr>
+    <tr><td>    <label class="lab" for="UID">*UID:</label></td>
+        <td> <input type="password" id="uid" placeholder="Enter ADHAAR Number"></input><br><br></td>
+    </tr>
+    <tr><td>   <label class="lab" for="sta">*State:</label></td>
+        <td> <input type="text" id="sta" placeholder="Enter your first name"></input><br><br></td>
+    </tr>
+    <tr><td>   <label class="lab" for="dis">*District:</label></td>
+        <td> <input type="text" id="dis" placeholder="Enter your first name"></input><br><br></td>
+    </tr>
+    <tr><td>   <label class="lab" for="add">*Address1:</label></td>
+        <td> <textarea type="address" id="add" cols="30" rows="8" placeholder="Enter your Permanent Address1"></textarea><br><br></td>
+    </tr>
+    <tr><td>   <label class="lab" for="add1">Address2:</label></td>
+        <td> <textarea type="address" id="add1" cols="30" rows="8" placeholder="Enter your Permanent Address2"></textarea><br><br></td>
+    </tr>
+    <tr><td>   <label class="lab" for="name">*Occupation:</label></td>
+        <td> <select>
+        <option value="Government">Government</option>
+        <option value="Private">Private</option>
+        <option value="Business">Business</option>
+        </select><br><br></td>
+    </tr>
+    <tr><td>   <label class="lab" for="des">*Designation:</label></td>
+            <td>  <input type="text" id="des" placeholder="Enter your post"></input><br><br></td>
+        </tr>
+         <tr><td>   <label class="lab" for="com">*Company/Business name:</label></td>
+        <td>  <input type="text" id="com" placeholder="Enter your company name"></input><br><br></td>
+    </tr>
+    <tr><td>   <label class="lab" for="mail">Email:</label></td>
+        <td>  <input type="email" id="mail" placeholder="Enter Email Id"></input><br><br></td>
+    </tr>
+        <tr><td>   <button onclick="display()">Submit</button></td></tr>
+</table>
+ </form>    
+</body>
     
 </html>
