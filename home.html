@@ -2,7 +2,7 @@
 <html>
     <head>
         <style>
-<<<<<<< HEAD
+
             #admin{width:100%;height:25px;border:1px solid black ;text-align:left;font-weight:bolder;}
             #info{height:90%;width:30%;border:1px solid black ;margin-left:1050px;}
             .us{color:black;border-radius:15px;padding:10px;margin-top:60px;}
@@ -10,9 +10,120 @@
           .pas{color:black;border-radius:15px;padding:10px;margin-top:10px;}
           .btn{margin-left:100px;padding:10px 100px 10px 100px;border-radius:15px;background-color:yellowgreen;font-family:Georgia, 'Times New Roman', Times, serif;}
           .chat-popup{display:none;position:fixed;bottom:0;right:150px;border:3px solid grey;z-index:9;}
+        .message{text-align: left;}
+        .messagebox { border: 2px outset black; text-align: center; background-color:cyan;}
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
         </style>
+        <script type="text/javascript">
+function changeColor()
+{
+  var x=document.getElementById("message");
+  if(x.style.color=="yellow")
+  x.style.color="red";
+  else if( x.style.color=="red")
+  x.style.color="green";
+  else
+  x.style.color="red"
+}
+        </script>
     </head>
-    <body>
+    <body onload="setInterval(changeColor,1000)">
       <div id="admin">
             <nav style="background-color:white;">
             <a style="font-size:20px;" href="C:\Users\HIMANI\Desktop\firstproject git\home.html">Home|</a>
@@ -22,11 +133,17 @@
             <a style="font-size:20px;float:right;" href="C:\Users\HIMANI\Desktop\firstproject git\home.html"/>Hindi</a> 
     </nav>
                 </div>
+
                 <div id="moving"><marquee>  IF YOU ARE AN ADMIN AT OUR BANK SERVICES KINDLY LOGIN FROM HERE  <a href="C:\Users\HIMANI\Desktop\firstproject git\BankManagement.github.io\admin.html">Click here</a></marquee></div> 
-                 
-                
+
+                <div id="moving"><marquee>  IF YOU ARE AN ADMIN AT OUR BANK SERVICES KINDLY LOGIN FROM HERE  <a href="C:\Users\HIMANI\Desktop\firstproject git\admin.html">Click here</a></marquee></div> 
+                 <div class="messagebox">
+                <h3 id="message">Our Bank does not ask for any Confidential information such as bank account details,OTP or PIN <BR>
+                  Any such calls can be made by fraudster. Pls don't share personal information. </h3>  
+                </div>
+
         <div style="float:right" id="info">
-            <form>
+            <form >
                 <label  style="margin-left:70px;font-weight:bolder;font-size:30px;" for="user">Username:</label>
                 <input class="us" type="text" id="user" Placeholder="Your account username" ></input><br/><br>
                 <label style="margin-left:70px;font-weight:bolder;font-size:30px;"  for="pass">Password:</label>
@@ -44,8 +161,46 @@
                  </div></center>
                
                 <button onclick="openform()" class="chat-popup">Click here to review our webpage</button>
+                
+                <div class="slideshow-container">
 
+                  <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2019/09/chase-visa-credit-card-contactless-payment-1568101353.jpg" style="width:70%">
+                    <div class="text">Easy transcation</div>
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="https://previews.agefotostock.com/previewimage/medibigoff/648a877fca60e1c1aab60e1b5e01e540/esy-044930621.jpg" style="width:70%">
+                    <div class="text">Easy home loan</div>
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="https://www.indusind.com/iblogs/wp-content/uploads/Personal-Loan-Or-Gold-Loan-%E2%80%93-How-To-Choose-Between-The-Two.jpg" style="width:70%">
+                    <div class="text">Easy gold loan</div>
+                  </div>
+                  <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="https://image.shutterstock.com/image-photo/online-shopping-concept-using-laptop-260nw-553015624.jpg" style="width:70%">
+                    <div class="text">Easy online transaction</div>
+                  </div>
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  
+                  </div>
+                  <br>
+                  
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                  </div>
+                  
+                  
+                </div>
 
-        
     </body>
     </html>
