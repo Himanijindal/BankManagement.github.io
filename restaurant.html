@@ -8,10 +8,10 @@
 <table>
 <tr><td colspan="3"><h1>MENU</h1></td></tr>
 <tr><td colspan="3"><h2>Beverages</h2></td></tr>
-<tr><td>Hazelnut Coffee</td> <td id="phc">₹120</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="coffee" placeholder="0" min="1" /></td></tr>
-<tr><td>Mango Mint Lime</td><td id="pmml">₹150</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="mlime" placeholder="0" min="1" /></td></tr>
-<tr><td>Chilli Mint Mojito</td><td id="pcmm">₹150</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="mm" placeholder="0" min="1" /></td></tr>
-<tr><td>Beer-650ml</td><td id="pb">₹150</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="beer" placeholder="0" min="1"/></td></tr>
+<tr><td>Hazelnut Coffee</td> <td id="phc">₹120</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="coffee" value=0 placeholder="0" min="1" /></td></tr>
+<tr><td>Mango Mint Lime</td><td id="pmml">₹150</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="mlime" value=0 placeholder="0" min="1" /></td></tr>
+<tr><td>Chilli Mint Mojito</td><td id="pcmm">₹150</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="mm" value=0 placeholder="0" min="1" /></td></tr>
+<tr><td>Beer-650ml</td><td id="pb">₹150</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="beer" value=0 placeholder="0" min="1"/></td></tr>
 <tr><td colspan="3"><h2>Italian</h2></td></tr>
 <tr><td>Pizza Napoletana-Medium</td><td id="pnm">₹600</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="ppnm" placeholder="0" min="1" /></td></tr>
 <tr><td>Focaccia</td><td id="pf">₹650</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="foca" placeholder="0" min="1"/></td></tr>
@@ -22,31 +22,43 @@
 <tr><td>Hot Pot</td>td><td id="php">₹200</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="hp" placeholder="0" min="1"/></td></tr>
 <tr><td>Yanghzou Fried Rice</td><td id="ypc">₹150</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="yfr" placeholder="0" min="1"/></td></tr>
 <tr><td>Kung Pao Chicken</td><td id="pkpc">₹500</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="kpc" placeholder="0" min="1" /></td></tr>
-
-       <tr><td colspan="3"><h2>Continental</h2></td></tr>
-
-    <tr><td>Paneer Steak</td> <td id="pSteak">₹200</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Steak" placeholder="0" min="1" /></td></tr>
- 
+<tr><td colspan="3"><h2>Continental</h2></td></tr>
+<tr><td>Paneer Steak</td> <td id="pSteak">₹200</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Steak" placeholder="0" min="1" /></td></tr> 
 <tr><td>Roesti And Salad</td> <td id="pRoesti">₹180</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Roesti" placeholder="0" min="1" /></td></tr>
 <tr><td>Peppered Pasta Salad</td> <td id="pPepper">₹120</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Pepper" placeholder="0" min="1" /></td></tr>
- <tr><td>Chicken and Cheese Salad</td> <td id="pSalad">₹250</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Salad" placeholder="0" min="1" /></td></tr>
-
-    <tr><td colspan="3"><h2>Indian</h2></td></tr>
- <tr><td>Matar Paneer</td> <td id="pMatar">₹120</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Matar" placeholder="0" min="1" /></td></tr>
-
- <tr><td>Dal Makahani</td> <td id="pDal">₹150</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Dal" placeholder="0" min="1" /></td></tr>
-
- <tr><td>Tandoori Chicken</td> <td id="pChicken">₹150</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Chicken" placeholder="0" min="1" /></td></tr>
-
- <tr><td>Naan/Plain Roti</td> <td id="pNaan">₹150</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Naan" placeholder="0" min="1" /></td></tr>
-
-    
-    <tr><td colspan="3"><h2>Desserts</h2></td></tr>
-    <tr><td>Chocolate Icecream</td> <td id="pCI">₹90</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="ice" placeholder="0" min="1" /></td></tr>
+<tr><td>Chicken and Cheese Salad</td> <td id="pSalad">₹250</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Salad" placeholder="0" min="1" /></td></tr>
+<tr><td colspan="3"><h2>Indian</h2></td></tr>
+<tr><td>Matar Paneer</td> <td id="pMatar">₹120</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Matar" placeholder="0" min="1" /></td></tr>
+<tr><td>Dal Makahani</td> <td id="pDal">₹150</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Dal" placeholder="0" min="1" /></td></tr>
+<tr><td>Tandoori Chicken</td> <td id="pChicken">₹150</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Chicken" placeholder="0" min="1" /></td></tr>
+<tr><td>Naan/Plain Roti</td> <td id="pNaan">₹150</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Naan" placeholder="0" min="1" /></td></tr>
+<tr><td colspan="3"><h2>Desserts</h2></td></tr>
+<tr><td>Chocolate Icecream</td> <td id="pCI">₹90</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="ice" placeholder="0" min="1" /></td></tr>
     <tr><td>Payasum</td> <td id="pP">₹100</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Payasum" placeholder="0" min="1" /></td></tr>
     <tr><td>Gazar Ka Halwa</td> <td id="pGH">₹120</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Gazar" placeholder="0" min="1" /></td></tr>
     <tr><td>Shrikhand</td> <td id="pShri">₹150</td>  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="Shrikhand" placeholder="0" min="1" /></td></tr>
    </table><br>
-   <button id="btn">Order now</button>
+   <button id="btn"  onclick="myfunc()">Order now</button>
+   <script>
+    function  myfunc()
+{     
+   var x,sum=0;
+   x=document.getElementById("coffee").value;
+    if(!isNaN(x)&&x>0)
+   { document.write(120*x);
+   sum+=(120*x);
+   }
+
+   var y=document.getElementById("Shrikhand").value;
+    if(!isNaN(y)&&y>0)
+   { document.write(150*y);
+   sum+=(150*y);}
+   var z=document.getElementById("Steak").value;
+    if(!isNaN(z)&&z>0)
+   { document.write(200*z);
+   sum+=(200*z);}
+
+}
+   </script>
 </body>
 </html>
