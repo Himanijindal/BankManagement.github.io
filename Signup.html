@@ -1,70 +1,144 @@
 <html>
     <head>
         <style>
-        #cs{padding:20px;background-color:blue;}
-       
+        #cs{padding:20px;background-color:rgb(52, 151, 158);}
         </style>
-        <script type="text/javascript">
-            function display(){
-            alert('Congratulation!!! Your form has been submitted. You will soon be able to operate your account');
-            }
-        </script>
+       <script>
+function Valid(){
+    var input=document.getElementById("name").value;
+    var regex=/^[a-zA-z/S/s/-/_/.]{3,22}$/;
+    if(regex.test(input)){document.getElementById("myname").innerHTML="valid";}
+    else{document.getElementById("myname").innerHTML="Not valid";}
+} 
+function Valid1(){
+    var input=document.getElementById("lname").value;
+    var regex=/^[a-zA-z/S/s/-/_/.]{3,22}$/;
+    if(regex.test(input)){document.getElementById("mylname").innerHTML="valid";}
+    else{document.getElementById("mylname").innerHTML="Not valid";}
+} 
+function Valid2(){
+    var input=document.getElementById("fh").value;
+    var regex=/^[a-zA-z/S/s/-/_/.]{3,22}$/;
+    if(regex.test(input)){document.getElementById("myfh").innerHTML="valid";}
+    else{document.getElementById("myfh").innerHTML="Not valid";}
+} 
+function Valid3(){
+    var input=document.getElementById("num").value;
+    //var regex=/^[a-zA-z/S/s/-/_/.]{3,22}$/;
+    if(input.length==10){document.getElementById("mynum").innerHTML="valid";}
+    else{document.getElementById("mynum").innerHTML="Not valid";}
+} 
+function Valid4(){
+    var input=document.getElementById("mail").value;
+    var regex=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    if(regex.test(input)){document.getElementById("mymail").innerHTML="valid";}
+    else{document.getElementById("mymail").innerHTML="Not valid";}
+}
+function Valid5(){
+    var input=document.getElementById("m").value;
+    var regex=/^[a-zA-z/S/s/-/_/.]{3,22}$/;
+    if(regex.test(input)){document.getElementById("mym").innerHTML="valid";}
+    else{document.getElementById("mym").innerHTML="Not valid";}
+} 
+function Valid6(){
+    var input=document.getElementById("age").value;
+    var regex=/^[0-9]{1,2}$/;
+    if(regex.test(input)){document.getElementById("myage").innerHTML="valid";}
+    else{document.getElementById("myage").innerHTML="Not valid";}
+}  
+function Valid7(){
+    var input=document.getElementById("uid").value;
+    //var regex=/^[0-9]$/;
+    if(input.length==16){document.getElementById("myuid").innerHTML="valid";}
+    else{document.getElementById("myuid").innerHTML="Not valid";}
+} 
+function Valid8(){
+    var input=document.getElementById("sta").value;
+    var regex=/^[a-zA-z/S/s/-/_/.]{3,22}$/;
+    if(regex.test(input)){document.getElementById("mysta").innerHTML="valid";}
+    else{document.getElementById("mysta").innerHTML="Not valid";}
+} 
+function Valid9(){
+    var input=document.getElementById("dis").value;
+    var regex=/^[a-zA-z/S/s/-/_/.]{3,22}$/;
+    if(regex.test(input)){document.getElementById("mydis").innerHTML="valid";}
+    else{document.getElementById("mydis").innerHTML="Not valid";}
+} 
+function Valid10(){
+    var input=document.getElementById("des").value;
+    var regex=/^[a-zA-z/S/s/-/_/.]{3,50}$/;
+    if(regex.test(input)){document.getElementById("mydes").innerHTML="valid";}
+    else{document.getElementById("mydes").innerHTML="Not valid";}
+} 
+function Valid11(){
+    var input=document.getElementById("com").value;
+    var regex=/^[a-zA-z/S/s/-/_/.]{3,50}$/;
+    if(regex.test(input)){document.getElementById("mycom").innerHTML="valid";}
+    else{document.getElementById("mycom").innerHTML="Not valid";}
+} 
+function Valid12(){
+    var input=document.getElementById("com").value;
+    //var regex=/^[a-zA-z/S/s/-/_/.]{3,50}$/;
+    //if(regex.test(input)){document.getElementById("mycom").innerHTML="valid";}
+    //else{document.getElementById("mycom").innerHTML="Not valid";}
+} 
+       </script>
     </head>
     <body id="cs">
         <p>Fields marked with asterik(*) are compulsory to be filled</p>
         <form id="form">
             <table>
     <tr><td><label class="lab" for="name">*First Name:</label></td>
-    <td><input type="text" id="name" placeholder="Enter your first name"></input><br><br></td>
+    <td><input type="text" id="name" placeholder="Enter your first name" required onblur="Valid();"></input><span id="myname"></span><br><br></td>
 </tr>
    <tr><td><label class="lab" for="lname">*Last Name:</label></td> 
-    <td><input type="text" id="lname" placeholder="Enter your last name"></input><br><br></td>
+    <td><input type="text" id="lname" placeholder="Enter your last name" required onblur="Valid1();"></input><span id="mylname"></span><br><br></td>
     </tr>
 </tr><td><label class="lab" for="fh">*Name of Father/Husband/Guardian:</label></td>
-   <td> <input type="text" id="fh" placeholder="Enter name"></input><br><br></td>
+   <td> <input type="text" id="fh" placeholder="Enter name" required onblur="Valid2();"></input><span id="myfh"></span><br><br></td>
 </tr>
    <tr><td> <label class="lab" for="num">*Phone Number:</label></td>
-   <td><input type="text" id="num" placeholder="Enter your Phone number(XXX-XXX-XXXX)"></input><br><br></td>
+   <td><input type="number" id="num" placeholder="Enter your Phone number(XXX-XXX-XXXX)" required onblur="Valid3();"></input><span id="mynum"></span><br><br></td>
    </tr>
    <tr><td>   <label class="lab" for="mail">*Email:</label></td>
-    <td>  <input type="email" id="mail" placeholder="Enter Email Id"></input><br><br></td>
+    <td>  <input type="email" id="mail" placeholder="Enter Email Id" required onblur="Valid4();"></input><span id="mymail"></span><br><br></td>
 </tr>
    <tr><td>  <label class="lab" for="dob">*Date of Birth(DOB):</label></td>
-    <td> <input type="date" id="dob" placeholder="Select your DOB"></input><br><br></td>
+    <td> <input type="date" id="dob" placeholder="Select your DOB" required onblur="Valid12();"></input><span id="mydob"></span><br><br></td>
    </tr>
    <tr><td>   <label class="lab" for="m">*Name of Mother/Guardian:</label></td>
-   <td> <input type="text" id="m" placeholder="Enter Mothre's name"></input><br><br></td>
+   <td> <input type="text" id="m" placeholder="Enter Mother's name" required onblur="Valid5();"></input><span id="mym"></span><br><br></td>
    </tr>
    <tr><td>   <label class="lab" for="age">*Age:</label></td>
-    <td>  <input type="number" id="age" placeholder="Enter your AGE"></input><br><br></td>
+    <td>  <input type="number" id="age" placeholder="Enter your AGE" required onblur="Valid6();"></input><span id="myage"></span><br><br></td>
 </tr>
-    <tr><td>    <label class="lab" for="UID">*UID:</label></td>
-        <td> <input type="password" id="uid" placeholder="Enter ADHAAR Number"></input><br><br></td>
+    <tr><td>    <label class="lab" for="uid">*UID:</label></td>
+        <td> <input type="password" id="uid" placeholder="Enter ADHAAR Number" required onblur="Valid7();"></input><span id="myuid"></span><br><br></td>
     </tr>
     <tr><td>   <label class="lab" for="sta">*State:</label></td>
-        <td> <input type="text" id="sta" placeholder="Enter your first name"></input><br><br></td>
+        <td> <input type="text" id="sta" placeholder="Enter your State" required onblur="Valid8();"></input><span id="mysta"></span><br><br></td>
     </tr>
     <tr><td>   <label class="lab" for="dis">*District:</label></td>
-        <td> <input type="text" id="dis" placeholder="Enter your first name"></input><br><br></td>
+        <td> <input type="text" id="dis" placeholder="Enter your District" required onblur="Valid9();"></input><span id="mydis"></span><br><br></td>
     </tr>
     <tr><td>   <label class="lab" for="add">*Address1:</label></td>
-        <td> <textarea type="address" id="add" cols="30" rows="8" placeholder="Enter your Permanent Address1"></textarea><br><br></td>
+        <td> <textarea type="address" id="add" cols="30" rows="8" placeholder="Enter your Permanent Address1" required></textarea><br><br></td>
     </tr>
     <tr><td>   <label class="lab" for="add1">Address2:</label></td>
-        <td> <textarea type="address" id="add1" cols="30" rows="8" placeholder="Enter your Permanent Address2"></textarea><br><br></td>
+        <td> <textarea type="address" id="add1" cols="30" rows="8" placeholder="Enter your Permanent Address2" required></textarea><br><br></td>
     </tr>
     <tr><td>   <label class="lab" for="name">*Occupation:</label></td>
-        <td> <select>
+        <td> <select  required>
         <option value="Government">Government</option>
         <option value="Private">Private</option>
         <option value="Business">Business</option>
         </select><br><br></td>
     </tr>
     <tr><td>   <label class="lab" for="des">*Designation:</label></td>
-            <td>  <input type="text" id="des" placeholder="Enter your post"></input><br><br></td>
+            <td>  <input type="text" id="des" placeholder="Enter your post" required onblur="Valid10();"></input><span id="mydes"></span><br><br></td>
         </tr>
          <tr><td>   <label class="lab" for="com">*Company/Business name:</label></td>
-        <td>  <input type="text" id="com" placeholder="Enter your company name"></input><br><br></td>
+        <td>  <input type="text" id="com" placeholder="Enter your company name" required onblur="Valid11();"></input><span id="mycom"></span><br><br></td>
     </tr>
     
         <tr><td>   <button onclick="display()">Submit</button></td></tr>
