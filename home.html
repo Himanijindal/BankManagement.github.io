@@ -5,8 +5,8 @@
         <style>
 
             #admin{width:100%;height:25px;border:1px solid black ;text-align:left;font-weight:bolder;}
-            #info{height:90%;width:30%;border:1px solid black ;margin-left:1050px;}
-            .us{color:black;border-radius:15px;padding:10px;margin-top:60px;}
+          #info{height:60%;width:30%;border:1px solid black ;margin-left:1050px;}
+            .us{color:black;border-radius:15px;padding:10px;margin-top:40px;}
           #moving{color:tomato;background-color:thistle; width:100%;height:20px;border:1px solid black ;}
           .pas{color:black;border-radius:15px;padding:10px;margin-top:10px;}
           .btn{margin-left:100px;padding:10px 100px 10px 100px;border-radius:15px;background-color:yellowgreen;font-family:Georgia, 'Times New Roman', Times, serif;}
@@ -98,10 +98,17 @@ function changeColor()
   else
   x.style.color="red"
 }
-
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+function changeColor1()
+{
+  var x=document.getElementById("message1");
+  if(x.style.color=="black")
+  x.style.color="blue";
+  else if( x.style.color=="blue")
+  x.style.color="lightgreen";
+  else
+  x.style.color="blue"
 }
+
 
 var slideIndex = 0;
 showSlides();
@@ -124,13 +131,33 @@ function showSlides() {
 }
 </script>
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+
+</script>
       
     </head>
 
+
     <body onload="setInterval(changeColor,1000)" bgcolor="sky blue">
       <div id="google_translate_element"></div>
+=======
+    <body onload="setInterval(changeColor,1000)" onload="setInterval(changeColor1,1000)">
+    
+      <div><img src="images/logoproject (2).PNG" width=10% height="8%"  />
+        <div class ="message" id="message1" style="font-size:40px;margin-top:2%;float:right;">Online Banking</div>
+        </div>
+              
+
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="translation.txt"></script>
+
 
 
       <div id="admin">
