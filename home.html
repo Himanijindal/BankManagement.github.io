@@ -138,20 +138,19 @@ function changeColor1()
       
     </head>
 
-    <body onload="setInterval(changeColor,1000)" onload="setInterval(changeColor1,1000)">
+    <body onload="setInterval(changeColor,1000);setInterval(changeColor1,1000)">
     
       <div><img src="images/logoproject (2).PNG" width=10% height="8%"  />
         <div class ="message" id="message1" style="font-size:40px;margin-top:2%;float:right;">Online Banking</div>
         </div>
-              
-
-        <div style="float:right;" id="google_translate_element"></div>
+        <div style="float:right;"id="google_translate_element"></div>
 
         <script type="text/javascript">
         function googleTranslateElementInit() {
           new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
         </script>
+        <br>
         
         <script type="text/javascript" src="translation.txt"></script>
 
