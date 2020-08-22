@@ -3,11 +3,13 @@
 <html lang="en-US">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
         <style>
 
             #admin{width:100%;height:25px;border:1px solid black ;text-align:left;font-weight:bolder;}
             .c1{margin-left:100px;}
-          #info{height:100%;width:40%;border:1px solid black ;margin-left:1050px;}
+          #info{height:100%;width:40%;border:1px solid black ;margin-left:1040px;}
           #middlediv{text-size-adjust:10px;}
           table{ margin-left: auto;
   margin-right: auto;}
@@ -20,11 +22,7 @@
         .messagebox { border: 2px outset black; text-align: center; background-color:rgba(124, 106, 0, 0.616);}
         * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display:flex;}
-img {vertical-align: middle;}
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
 img {vertical-align: middle;}
 /*.fa {
   padding: 20px;
@@ -73,70 +71,15 @@ img {vertical-align: middle;}
   color: white;
 }
 
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.mySlides {display:none;}
+.row {
+  display:contents;
+}
+.column {
+  flex:50%;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
 }
 </style>
         <script type="text/javascript">
@@ -162,25 +105,6 @@ function changeColor1()
 }
 
 
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 10000); // Change image every 2 seconds
-}
 </script>
 
 
@@ -225,8 +149,31 @@ function showSlides() {
                 <h3 id="message">Our Bank does not ask for any Confidential information such as bank account details,OTP or PIN <BR>
                   Any such calls can be made by fraudster. Pls don't share personal information. </h3>  
                 </div>
-
-        <div style="float:right" id="info">
+                <div class="row">
+                  <div class="column">
+                <div class="w3-content w3-section" style="max-width:1045px;max-height:1045px;">
+                  <img class="mySlides w3-animate-left" src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2019/09/chase-visa-credit-card-contactless-payment-1568101353.jpg" style="width:70%;height:70%;">
+                  <img class="mySlides w3-animate-left" src="https://previews.agefotostock.com/previewimage/medibigoff/648a877fca60e1c1aab60e1b5e01e540/esy-044930621.jpg" style="width:70%;height: 70%;">
+                  <img class="mySlides w3-animate-left" src="https://www.indusind.com/iblogs/wp-content/uploads/Personal-Loan-Or-Gold-Loan-%E2%80%93-How-To-Choose-Between-The-Two.jpg" style="width:70%;height:100%;">
+                  <img class="mySlides w3-animate-left" src="https://image.shutterstock.com/image-photo/online-shopping-concept-using-laptop-260nw-553015624.jpg" style="width:70%;height:70%;">  
+                </div>
+                <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 5000); // Change image every 2 seconds
+                }
+                </script>
+        <div style="float:right;"  id="info">
           <div id="middlediv"><br>
             <form ><table><tr>
                 <th class="c1" for="user">Username:</th>
@@ -242,33 +189,12 @@ function showSlides() {
                   <div class="icon-bar">  <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-linkedin"></a>
-                    <a href="#" class="fa fa-instagram"></a></div>
+                    <a href="#" class="fa fa-instagram"></a>
               </div>
                 <button onclick="openform()" class="chat-popup">Click here to review our webpage</button>
-            <div class="slideshow-container">
-
-                    <div class="mySlides fade">
-                      <div class="numbertext">1 / 4</div>
-                      <img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2019/09/chase-visa-credit-card-contactless-payment-1568101353.jpg" style="width:70%">
-                      <div class="text">Caption Text</div>
-                    </div>
-                    
-                    <div class="mySlides fade">
-                      <div class="numbertext">2 / 4</div>
-                      <img src="https://previews.agefotostock.com/previewimage/medibigoff/648a877fca60e1c1aab60e1b5e01e540/esy-044930621.jpg" style="width:70%">
-                      <div class="text">Caption Two</div>
-                    </div>
-                    
-                    <div class="mySlides fade">
-                      <div class="numbertext">3 / 4</div>
-                      <img src="https://www.indusind.com/iblogs/wp-content/uploads/Personal-Loan-Or-Gold-Loan-%E2%80%93-How-To-Choose-Between-The-Two.jpg" style="width:70%">
-                      <div class="text">Caption Three</div>
-                    </div>
-                    <div class="mySlides fade">
-                      <div class="numbertext">4 / 4</div>
-                      <img src="https://image.shutterstock.com/image-photo/online-shopping-concept-using-laptop-260nw-553015624.jpg" style="width:70%">
-                      <div class="text">Caption Four</div>
-                    </div>
-                    </div>
+            
+              </div>
+              </div>
+              </div>
     </body>
     </html>
