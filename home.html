@@ -33,6 +33,22 @@ img {vertical-align: middle;}
   margin: 5px 2px;
   /*border-radius: 50%;
 }*/
+.maindiv{ display: flex;}
+.w3-content
+{ flex:2;
+  border: 2px outset black;
+  background-color: grey;
+  text-align: center;
+  width:60%;
+  height:70%;
+}
+.info{flex:1;}
+.text {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  font-family:verdana;
+}
 .icon-bar {
   width: 100%;
   background-color: #555;
@@ -72,27 +88,7 @@ img {vertical-align: middle;}
 }
 
 .mySlides {display:none;}
-.row {
-  display:contents;
-}
-.column {
-  flex:50% 50%;
-}
-.w3-content
-{
-  border: 2px outset black;
-  background-color: grey;
-  text-align: center;
-  width:60%;
-  height:70%;
-}
-.text {
-  color: white;
-  font-size: 15px;
-  text-align: center;
-  font-family:verdana;
-}
-}
+
 </style>
         <script type="text/javascript">
 function changeColor()
@@ -118,11 +114,6 @@ function changeColor1()
 
 
 </script>
-
-
-
-</script>
-      
     </head>
 
     <body onload="setInterval(changeColor,1000);setInterval(changeColor1,1000)">
@@ -160,8 +151,7 @@ function changeColor1()
                 <h3 id="message">Our Bank does not ask for any Confidential information such as bank account details,OTP or PIN <BR>
                   Any such calls can be made by fraudster. Pls don't share personal information. </h3>  
                 </div>
-                <div class="row">
-                  <div class="column">
+                <div class="maindiv">
                 <div class="w3-content w3-section" style="max-width:1045px;max-height:1045px;">
                   <div class="mySlides left" >
                   <img src="https://www.dqindia.com/wp-content/uploads/2017/02/mobile-wallet-840x420.jpg" style="width:100%;height:100%;">
@@ -184,23 +174,21 @@ function changeColor1()
                   <div class="text">Easy linking</div>
                 </div>
                 </div>
-                <script>
-                var myIndex = 0;
-                carousel();
-                
-                function carousel() {
-                  var i;
-                  var x = document.getElementsByClassName("mySlides");
-                  for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
-                  }
-                  myIndex++;
-                  if (myIndex > x.length) {myIndex = 1}    
-                  x[myIndex-1].style.display = "block";  
-                  setTimeout(carousel, 5000); // Change image every 2 seconds
-                }
-                </script>
-        <div style="float:right;"  id="info">
+                <script>var myIndex = 0;
+                  carousel();
+                  
+                  function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";  
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 5000); // Change image every 2 seconds
+                  }</script>
+        <div style="float:right;"  class="info">
           <div id="middlediv"><br>
             <form ><table><tr>
                 <th class="c1" for="user">Username:</th>
@@ -220,7 +208,6 @@ function changeColor1()
               </div>
                 <button onclick="openform()" class="chat-popup">Click here to review our webpage</button>
             
-              </div>
               </div>
               </div>
     </body>
