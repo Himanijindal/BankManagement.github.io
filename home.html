@@ -16,7 +16,7 @@
             .us{color:black;border-radius:15px;padding:10px;margin-top:10px;}
           #moving{color:tomato;background-color:rgb(30, 210, 84); width:100%;height:20px;border:1px solid black ;}
           .pas{color:black;border-radius:15px;padding:10px;margin-top:10px;}
-          .btn{margin-left:190px;padding:10px 100px 10px 100px;border-radius:15px;background-color:yellowgreen;font-family:Georgia, 'Times New Roman', Times, serif;}
+          .btn{margin-center:190px;padding:10px 100px 10px 100px;border-radius:15px;background-color:yellowgreen;font-family:Georgia, 'Times New Roman', Times, serif;}
           .chat-popup{display:none;position:fixed;bottom:0;right:150px;border:3px solid grey;z-index:9;}
         .message{text-align: left;}
         .messagebox { border: 2px outset black; text-align: center; background-color:rgba(124, 106, 0, 0.616);}
@@ -43,7 +43,8 @@ img {vertical-align: middle;}
   height:70%;
 }
 .info{flex:1;
-  border: 2px outset black;}
+  border: 2px outset black;
+  height:600px}
 .text {
   color: white;
   font-size: 15px;
@@ -54,6 +55,7 @@ img {vertical-align: middle;}
   width: 100%;
   background-color: #555;
   overflow: auto;
+  align:bottom;
 }
 .icon-bar a {
   float: left;
@@ -200,18 +202,18 @@ function changeColor1()
                   }</script>
         <div style="float:right;"  class="info">
           <div id="middlediv"><br>
-            <form ><table><tr>
+            <form ><table ><tr>
                 <th class="c1" for="user">Username:</th>
                 <td><input class="us" type="text" id="user" Placeholder="Your account username" /></td></tr>
                   <tr>
                     <th for="pass">Password:</th><td><input class="pas" type="password" id="pass" Placeholder="Must be of 8 character" /></td></tr>
-               
-              </table ></form><br>
-              <button class="btn" value="submit">Log In  </button>  <br><br>
+               <tr><td colspan="2"><center><button class="btn" value="submit">Log In  </button></center></td></tr>
+              </table ></form>
+               <br><br>
                    <h2><center>TO GENERATE SIGN UP FORM </center></h2>
                    <a href="Signup.html"><center>Click here</center></a>
                   </div><br><br><br><h3 style="text-align:center;">Connect with us:</h3>
-                  <div class="icon-bar">  <a href="#" class="fa fa-facebook"></a>
+                  <div class="icon-bar" >  <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-linkedin"></a>
                     <a href="#" class="fa fa-instagram"></a>
