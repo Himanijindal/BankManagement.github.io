@@ -8,9 +8,9 @@
         <style>
 
             #admin{width:100%;height:25px;border:1px solid black ;text-align:left;font-weight:bolder;}
-            .c1{margin-left:100px;}
-         /* #info{height:100%;width:40%;border:1px solid black ;margin-left:1040px;flex:1;
-  border: 2px outset black;}*/
+           /* .c1{margin-left:100px;}*/
+        #info{height:100%;width:100%;border:1px solid black ;flex:1;
+  border: 2px outset black;}
           #middlediv{text-size-adjust:10px;}
           table{ margin-left: auto;
   margin-right: auto;}
@@ -18,7 +18,8 @@
             .sel{color:black;border-radius:15px;padding:10px 50px 10px 50px;margin-top:10px;border:2px solid black ;}
           #moving{color:tomato;background-color:honeydew; width:100%;height:20px;border:1px solid black ;}
           .pas{color:black;border-radius:15px;padding:10px;margin-top:10px;}
-          .btn{margin-center:190px;padding:10px 100px 10px 100px;border-radius:15px;background-color:yellowgreen;font-family:Georgia, 'Times New Roman', Times, serif;}
+          .aut{color:black;border-radius:15px;padding:10px;margin-top:10px;margin-left:50px;}
+          .btn{margin-left:400px;padding:10px 100px 10px 100px;border-radius:15px;background-color:yellowgreen;font-family:Georgia, 'Times New Roman', Times, serif;}
           .chat-popup{display:none;position:fixed;bottom:0;right:150px;border:3px solid grey;z-index:9;}
         .message{text-align: left;}
         .messagebox { border: 2px outset black; text-align: center; background-color:khaki; height:70px; text-size:3px;}
@@ -33,7 +34,7 @@ img {vertical-align: middle;}
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-  /*border-radius: 50%;
+  border-radius: 50%;
 }*/
 .maindiv{ display: flex;}
 .w3-content
@@ -44,9 +45,9 @@ img {vertical-align: middle;}
   width:100%;
   height:50%;
 }
-.info{flex:1;
+/*.info{flex:1;
   border: 2px outset black;
-  height:200px}
+  height:200px}*/
 .text {
   color: white;
   font-size: 15px;
@@ -103,7 +104,7 @@ img {vertical-align: middle;}
 .dropbtn {
   background-color: #4CAF50;
   color: white;
-  padding: 16px;
+  padding: 80px;
   font-size: 16px;
   border: none;
 }
@@ -196,22 +197,21 @@ function changeColor1()
      <h3 id="message">Our Bank does not ask for any Confidential information such as bank account details,OTP or PIN <BR>
        Any such calls can be made by fraudster. Pls don't share personal information. </h3>  
      </div>
-      <section id="login">
-        <div style="float:top;"  class="info">
+      <section >
+        <div id="info">
           <div id="middlediv"><br>
-            <form ><table >
-              <tr>
-                <td class="c1" for="selec">Authority:
-                <select class="sel" type="text" id="selec" >
+            <form ><table>
+              <tr> 
+              <th class="c1" for="user">Username:</th><td><input class="us" type="text" id="user" Placeholder="Your account username" /></td>
+              <th for="pass">Password:</th><td><input class="pas" type="password" id="pass" Placeholder="Must be of 8 character" /></td>
+                <th  for="selec">Authority:</th>
+               <td> <select class="sel" type="text" class="aut" id="selec" >
                 <option value="Manager">Manager</option>  
                 <option value="Cashier">Cashier</option>  
                 <option value="Admin">Admin</option>  
                 <option value="Customer">Customer</option>  
                 </select>
-                </td>
-                <th class="c1" for="user">Username:</th>
-                <td><input class="us" type="text" id="user" Placeholder="Your account username" /></td>
-                    <td for="pass">Password:</th><td><input class="pas" type="password" id="pass" Placeholder="Must be of 8 character" /></td></tr>
+                </td></tr>
                <tr><td colspan="3"><center><button class="btn" value="submit">Log In
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -221,8 +221,10 @@ function changeColor1()
                </button></center></td></tr> 
               </table ></form>
                    <h3><center>TO GENERATE SIGN UP FORM </center></h3>
-                   <a href="Signup.html"><center>Click here</center></a>
+                   <a href="Signup.html"><center>Click here</center></a>  <br>
                   </div>
+                </div>
+              
       </section>
                 
                 <div class="w3-content w3-section" style="max-width:2000;max-height:500px;">
@@ -231,7 +233,7 @@ function changeColor1()
                   <div class="text">Easy Transaction</div>
                 </div> 
                 <div class="mySlides left" >
-                  <img src="https://badermartin.com/wp-content/uploads/2017/10/refinance-home-residence-considerations.png" style="width:80%;height:300px;">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF7XjhwmPicKENoT6_VnumqMkl2cytBnVhvg&usqp=CAU" style="width:80%;height:300px;">
                   <div class="text">Easy Home loan</div>
                 </div>
                 <div class="mySlides left" >
@@ -264,29 +266,27 @@ function changeColor1()
         <br><br><br>
               </div>
              <br><br><br>
-              </div style="margin-top:30px;padding:30px;">
+              </div style="margin-top:20px;padding:30px;"><center><strong>Quick Clicks</strong></center><br>
               <div><div class="dropdown">
-                <button class="dropbtn">Loan</button>
+                <button class="dropbtn" style="background-color: darkblue;">Loan</button>
                 <div class="dropdown-content">
                   <a href="#">Home Loan</a>
                   <a href="#">Personal Loan</a>
                   <a href="#">Car Loan</a>
                 </div>
               <div class="dropdown">
-                <button style="margin-left:173px;" class="dropbtn">Insurance</button>
+                <button style="margin-left:83px;background-color: brown;" class="dropbtn">Insurance</button>
               </div>
               <div class="dropdown">
-                <button style="margin-left:173px;" class="dropbtn">Pension System</button>
+                <button style="margin-left:83px;background-color:darkblue" class="dropbtn">Pension System</button>
               </div> 
               <div class="dropdown">
-                <button style="margin-left:173px;" class="dropbtn">EMI's</button>
+                <button style="margin-left:83px;background-color:brown;" class="dropbtn">EMI's</button>
               </div>  
               <div class="dropdown">
-                <button style="margin-left:173px;" class="dropbtn">Net Banking</button>
+                <button style="margin-left:83px;background-color:darkblue;" class="dropbtn">Net Banking</button>
               </div>             
-              <div class="dropdown">
-                <button style="margin-left:173px;" class="dropbtn">Credit Card</button>
-              </div>  </div>
+              </div>
               <br><br>
               <div><h3 style="text-align:center;">Connect with us:</h3>
                 <div class="icon-bar" >  <a href="#" class="fa fa-facebook"></a>
