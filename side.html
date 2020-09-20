@@ -1,0 +1,258 @@
+<html>
+<style>
+.fixed-nav-bar {
+  position: fixed;
+  top: 50;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100px;
+  background-color: #00a087;
+font-size:20px;
+}
+
+/* The element at the top of the page right after the fixed navigation bar
+   MUST have sufficient top margin or else it will be covered by the bar */
+.content {
+  margin-top: 20px;
+}
+
+/* Example responsive navigation menu  */
+.fixed-nav-bar li, .fixed-nav-bar a { 
+  height: 100px;
+  line-height: 50px;
+}
+.menu {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.menu a, .menu a:visited {
+  color: #ffffff;
+}
+.menu a:hover, .menu a:target {
+  color: #ebebeb;
+}
+.menu-items {
+  display: inline-block;
+margin-left:200px;
+}
+.sitename {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+a.sitename, a:visited.sitename {
+  color: #e0e0e0;
+}
+.menu-items li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.menu-items a {
+  text-decoration: none;
+}
+.show, .hide {
+  display: none;
+  padding-left: 15px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center left;
+  color: #dde1e2;
+}
+.show {
+  background-image: url(assets/down-arrow-icon.png);
+}
+.hide {
+  background-image: url(assets/up-arrow-icon.png);
+}
+
+@media only screen and (max-width: 800px) {
+  .menu { 
+    position: relative;
+    width: 100%;
+  }
+  .sitename {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    margin-left: 0px;
+  }
+  .menu-items {
+    display: none; 
+    width: 100%;
+    margin-top: 50px;
+    background-color: #008378;
+  }
+  .menu-items li {
+    display: block;
+    text-align: center;
+  }
+  .show, .hide {  
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  .show {
+    display: inline-block;
+  }
+  .hide {
+    display: none;
+  }
+  #menu:target .show {
+    display: none;
+  }
+  #menu:target .hide, #menu:target .menu-items {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 220px) {
+  .sitename, .show, .hide {
+    font-size: 14px;
+  }
+}
+
+.header{background-color:blue;color:white;}
+.sidenav {
+//margin-top:150px;
+  height: 100%;
+  width: 320px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.side a:hover {
+  color: #f1f1f1;}
+#myhov a {
+  position: absolute;
+ right: -80px;
+  transition: 0.5s;
+  padding: 15 15 15 20px;
+  width: 80px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#myhov a:hover {
+  right: 0;
+}
+
+#about {
+  top: 140px;
+  background-color: #4CAF50;
+}
+
+#blog {
+  top: 200px;
+  background-color: #2196F3;
+}
+
+#projects {
+  top: 260px;
+  background-color: #f44336;
+}
+
+#contact {
+  top: 320px;
+  background-color: #555
+}
+.logos{flex:1;
+    background-color: #00a087;
+}
+.icon-bar {
+  width: 100%;
+  background-color: #00a087;
+  overflow: auto;
+  align:bottom;
+}
+.icon-bar a {
+  float: right;
+  width: 20px;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 15px;
+}
+/*.fa:hover {
+    opacity: 0.7;
+}*/
+.demo {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.mt {
+  margin-top: 30px;
+}
+.large {
+  width: 230px;
+}
+.diagonal {
+  position: relative;
+  line-height: 20px;
+ background:  DodgerBlue;
+ /* background: #67809F;*/
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  z-index: 1;
+  padding: 0px;
+text-align:center;
+}
+.diagonal:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 1000%;
+  background: #34495E;
+  z-index: -1;
+  transform-origin: 0% 0%;
+  transform: translateX(calc(20% - 25px)) translateY(10%) rotate(-45deg);
+  /transform: translateY(10%) translateX(16%) rotate(-45deg);
+  transition: transform .3s;
+text-align:center;
+}
+.diagonal:hover::after {
+  transform: translateY(10%) translateX(-25px) rotate(-45deg);
+}
+  
+</style>
+<body>
+<div class="demo">
+<div class="sidenav">
+ <button class="mt large diagonal"><a  target="terminator2"  href="unordered.html">1. Stock Market</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"  href="unordered.html">2. Mutual Funds</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"  href="#services">3. Direct Equity</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"   href="#contact">4. Saving Account</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"  href="#contact">5. Investment Bonds</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"  href="#contact">6. Fixed Deposits</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"  href="#clients">7. Recurring Deposits</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"  href="#contact">8. Public Provident Funds(PPF)</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"  href="#contact">9. Gold</a><br></button>
+ <button class="mt large diagonal"><a  target="terminator2"  href="#contact">10. Real Estate</a><br></button>
+</div>
+</div>
+</body>
+</html>
