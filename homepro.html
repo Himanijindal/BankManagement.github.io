@@ -1,57 +1,90 @@
 <html lang="en" dir="ltr">
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-compartible" content="ie-edge">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
  <script src="https://kit.fontawesome.com/a076d05399"></script>
 </head>
  <style>
    *{
-     padding:0;
-     margin:0;
-     text-decoration: none;
-     list-style: none;
+     padding:0px;
+     margin:0px;
      box-sizing: border-box;
    }
-   .body{
-     font-family:sans-serif;
-   }
-   .nav{
+   .navbar{ display:flex;
+   justify-content: space-around;
+   align-items:center;
      background: #1e1e1e;
-     height: 80px;
+     height: 100px;
      width: 100%;
+     font-family: 'Poppins', sans-serif;
    }
-   label.logo{
-     // neon one
+   .logo{
+     color: rgb(226,226,226);
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     font-size: 20px;
    }
-   nav ul{
-     display: inline-block;
-     line-height: 80px;
-     margin:0 5px;
-  }
-  .nav ul li a{
-    color:white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase; 
+   .nav-links{
+display: flex;
+background: #1e1e1e;
+justify-content: space-around;
+width:30%;
 
+   }
+   .nav-links a{
+    color:white;
+    text-decoration:none ;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 17px;
   }
-a.active,a:hover{
-background:white;
-transition: .5s;
+  .nav-links li {
+    list-style:none ;
+  }
+  .nav-links ul li a:hover{
+  color:cyan;
+  background: #1e1e1e;
+  border-bottom-color:cyan ;
+
+}
+@media screen and(max-width: 1020px){
+  .nav-links{
+    width: 60%;
+  }
+  
+}
+@media screen and(max-width: 760px){
+  .nav-links{
+    width: 60%;
+  }
+  
+}
+.bars{
+  display: none;
+}
+.bars div{
+width:25px;
+height: 5px;
+background-color: white;
+margin:5px;
 }
 </style>
 <body>
-<nav>
-
-  <lable class="logo">ChimesToLives</lable>
-  <ul>
+<nav class="navbar">
+  <div class="logo"><h3>ChimesToLives</h3></div>
+  <ul class="nav-links">
     <li><a class="active" href="#">Home</a></li>
     <li><a class="active" href="#">About Us</a></li>
     <li><a class="active" href="#">Contact Us</a></li>
     <li><a class="active" href="#">Info</a></li>
   </ul>
+  <div class="bars">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+  </div>
 </nav> 
- 
-</body>
+ </body>
 </html>
