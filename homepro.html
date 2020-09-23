@@ -7,7 +7,7 @@
  <script src="https://kit.fontawesome.com/a076d05399"></script>
 </head>
  <style>
-   *{
+   *{ background:#1e1e1e;
      padding:0px;
      margin:0px;
      box-sizing: border-box;
@@ -21,10 +21,112 @@
      font-family: 'Poppins', sans-serif;
    }
    .logo{
-     color: rgb(226,226,226);
-     text-transform: uppercase;
+     margin: 0px;
+     padding: 0px;
+     display: flex;
+     justify-content: left;
+     height:40vh;
      letter-spacing: 5px;
-     font-size: 20px;
+     font-family:fantasy; }
+   h3 {
+     margin:0;
+     padding:0;
+    /* color: #111;*/
+    color:#8f477f;
+     font-size: 40px;
+   }
+   h3 span{
+     display:table-cell;
+     margin: 0;
+     padding: 0;
+     animation: animate 2s linear infinite;
+     color:yellow;
+   }
+   h3 span:nth-child(1)
+   {
+     animation-delay:0s ;
+   }
+   h3 span:nth-child(2)
+   {
+     animation-delay:0.25s ;
+   }
+   h3 span:nth-child(3)
+   {
+     animation-delay:0.5s ;
+   }
+   h3 span:nth-child(4)
+   {
+     animation-delay:0.75s ;
+   }
+   h3 span:nth-child(5)
+   {
+     animation-delay:1.0;
+   }
+   h3 span:nth-child(6)
+   {
+     animation-delay:1.25s ;
+   }
+   h3 span:nth-child(7)
+   {
+     animation-delay:1.50s ;
+   }
+   h3 span:nth-child(8)
+   {
+     animation-delay:1.75 ;
+   }
+   h3 span:nth-child(9)
+   {
+     animation-delay:2.00s ;
+   }
+   h3 span:nth-child(10)
+   {
+     animation-delay:2.25s ;
+   }
+   h3 span:nth-child(11)
+   {
+     animation-delay:2.50s ;
+   }
+   h3 span:nth-child(12)
+   {
+     animation-delay:2.75s ;
+   }
+   h3 span:nth-child(13)
+   {
+     animation-delay:3.0s ;
+   }
+   h3 span:nth-child(14)
+   {
+     animation-delay:3.25s ;
+   }
+   @keyframes animate
+   {
+     
+       0%,100%{
+         color: #fff;
+         filter:blur(2px);
+         box-shadow:0 0 10px #00b3ff,
+         0 0 10px #00b3ff,
+         0 0 20px #00b3ff,
+         0 0 40px #00b3ff,
+         0 0 60px #00b3ff,
+         0 0 80px #00b3ff,
+         0 0 100px #00b3ff,
+         0 0 120px #00b3ff,
+         0 0 140px #00b3ff,
+         0 0 160px #00b3ff,
+         0 0 180px #00b3ff,
+         0 0 200px #00b3ff,
+         0 0 300px #00b3ff,
+         0 0 400px #00b3ff,
+       }
+       5%,95%
+       {
+         /*color:#111;*/
+         color:teal;
+         filter:blur(0px);
+         text-shadow: 0 0 10px none;
+       }
+     
    }
    .nav-links{
 display: flex;
@@ -39,15 +141,26 @@ width:30%;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 17px;
+    border-bottom: 3px solid transparent;
   }
   .nav-links li {
     list-style:none ;
   }
-  .nav-links ul li a:hover{
+  .nav-links a:hover{
   color:cyan;
   background: #1e1e1e;
   border-bottom-color:cyan ;
 
+}
+.nav-links a span{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+}
+.nav-links a:hover span{
+  transform: translateY(-50%) rotate(-180deg);
 }
 @media screen and(max-width: 1020px){
   .nav-links{
@@ -73,7 +186,21 @@ margin:5px;
 </style>
 <body>
 <nav class="navbar">
-  <div class="logo"><h3>ChimesToLives</h3></div>
+  <div class="logo"><h3>
+    <span>C</span>
+    <span>h</span>
+    <span>i</span>
+    <span>m</span>
+    <span>e</span>
+    <span>s</span>
+    <span>T</span>
+    <span>o</span>
+    <span>L</span>
+    <span>i</span>
+    <span>v</span>
+    <span>e</span>
+    <span>s</span>
+    </h3></div>
   <ul class="nav-links">
     <li><a class="active" href="#">Home</a></li>
     <li><a class="active" href="#">About Us</a></li>
