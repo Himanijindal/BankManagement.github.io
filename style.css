@@ -20,7 +20,7 @@ font-family: 'Poppins',sans-serif;
 }
 .container .box{
 position: relative;
-height:400px;
+height:450px;
 background:#060c21;
 display:flex;
 justify-content: center;
@@ -104,8 +104,8 @@ color: #fff;
     visibility: hidden;
 }
 .box:hover .content a{
-    transform:translateY(-40px);
-    opacity: 0;
+    transform:translateY(0);
+    opacity: 1;
     visibility: visible;
 }
 .box .content a:hover{
