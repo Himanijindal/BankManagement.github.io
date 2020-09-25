@@ -1,9 +1,11 @@
 <html lang="en" dir="ltr">
 <head>
+  <link rel="stylesheet" type="text/css" href="hoverCon.css">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-compartible" content="ie-edge">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+
  <script src="https://kit.fontawesome.com/a076d05399"></script>
 </head>
  <style>
@@ -30,7 +32,7 @@
 
      font-family:fantasy; }
    h3 {
-     margin:0;
+     margin:28px;
      padding:0;
     /* color: #111;*/
     color:#8f477f;
@@ -42,7 +44,7 @@
      margin: 0;
      padding: 0;
      animation: animate 2s linear infinite;
-     color:yellow;
+     color:#8f477f;
  }
    h3 span:nth-child(1)
    {
@@ -133,20 +135,23 @@
 display: flex;
 background: #1e1e1e;
 justify-content: space-around;
-width:30%;
-
+width:35%;
+/*margin:55px;*/
    }
    .nav-links a{
     color:white;
     text-decoration:none ;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 22px;
     border-bottom: 3px solid transparent;
+    
   }
   .nav-links li {
     list-style:none ;
+    margin-top: 33px;
   }
+
   .nav-links a:hover{
   color:cyan;
   background: #1e1e1e;
@@ -203,7 +208,7 @@ margin:5px;
     <span>s</span>
     </h3></div>
   <ul class="nav-links">
-    <li><a class="active" href="#">Home</a></li>
+    <li><a class="active" target="terminator2" href="right.html">Home</a></li>
     <li><a class="active" href="#">About Us</a></li>
     <li><a class="active" href="#">Contact Us</a></li>
     <li><a class="active" href="#">Info</a></li>
@@ -213,6 +218,13 @@ margin:5px;
         <div class="line2"></div>
         <div class="line3"></div>
   </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="#" id="about">About</a>
+    <a href="#" id="blog">Blog</a>
+    <a href="#" id="projects">Proj</a>
+    <a href="#" id="contact">Con</a>
+</div>
 </nav> 
+
  </body>
 </html>

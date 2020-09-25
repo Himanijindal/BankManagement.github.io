@@ -2,37 +2,43 @@
 
 #mySidenav a {
     position: absolute;
-    left: -80px;
+    /*left: 1500px;*/
+    right:-28px;
     transition: 0.3s;
-    padding: 15px;
-    width: 100px;
+    padding: 2px;
+    width: 60px;
     text-decoration: none;
     font-size: 20px;
     color: white;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px 5px 5px 5px;
   }
   
   #mySidenav a:hover {
-    left: 0;
+    /*left: 0;*/
+    right:0;
   }
   
   #about {
-    top: 20px;
+    /*top: 20px;*/
+    top:0px;
     background-color: #4CAF50;
   }
   
   #blog {
-    top: 80px;
+    /*top: 80px;*/
+    top:36px;
     background-color: #2196F3;
   }
   
   #projects {
-    top: 140px;
+    /*top: 140px;*/
+    top:72px;
     background-color: #f44336;
   }
   
   #contact {
-    top: 200px;
+    top:108px;
+    /*top: 200px;*/
     background-color: #555
   }
   
